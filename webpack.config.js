@@ -10,8 +10,7 @@ module.exports = {
     entry: PATHS.src + '/js/index.js',
     output: {
         path: PATHS.build,
-        filename: 'main.js',
-        publicPath: './build'
+        filename: 'main.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -19,7 +18,8 @@ module.exports = {
         })
     ],
     devServer: {
-        contentBase: './build'
+        // stats: 'errors-only',
+        port: 9000
     },
     module: {
         rules: [{
