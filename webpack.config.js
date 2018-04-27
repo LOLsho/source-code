@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const pug = require('./webpack/pug');
 const devServer = require('./webpack/devServer');
+const css = require('./webpack/css');
 const sass = require('./webpack/sass');
 
 
@@ -30,7 +31,8 @@ module.exports = function() {
         common,
         pug(),
         devServer(),
-        sass()
+        sass(),
+        css()
     ]);
 };
 
