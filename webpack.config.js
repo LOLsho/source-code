@@ -2,7 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const pug = require('./webpack/pug');
-const devserver = require('./webpack/devserver');
+const devServer = require('./webpack/devServer');
+const sass = require('./webpack/sass');
 
 
 PATHS = {
@@ -28,7 +29,8 @@ module.exports = function() {
     return merge([
         common,
         pug(),
-        devserver()
+        devServer(),
+        sass()
     ]);
 };
 
