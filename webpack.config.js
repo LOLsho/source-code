@@ -5,6 +5,7 @@ const pug = require('./webpack/pug');
 const devServer = require('./webpack/devServer');
 const css = require('./webpack/css');
 const sass = require('./webpack/sass');
+const images = require('./webpack/images');
 
 
 PATHS = {
@@ -17,7 +18,7 @@ const common = {
     entry: PATHS.src + '/js/index.js',
     output: {
         path: PATHS.build,
-        filename: 'main.js'
+        filename: 'js/main.js'
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -32,7 +33,8 @@ module.exports = function() {
         pug(),
         devServer(),
         sass(),
-        css()
+        css(),
+        images(),
     ]);
 };
 

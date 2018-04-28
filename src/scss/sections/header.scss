@@ -1,8 +1,22 @@
 .header__title {
   color: pink;
   transition: .3s;
+  font-family: someFont, Arial, Helvetica, sans-serif;
 
   &:hover {
     color: green;
   }
+}
+
+.bg-test {
+  height: 300px;
+  width: 300px;
+  background: url("../img/svg/icon-reload.svg") no-repeat;
+  fill: pink;
+}
+
+.svg {
+  width: 32px;
+  cursor: pointer;
+  fill: #ccc;
 }
