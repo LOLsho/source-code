@@ -4,14 +4,14 @@
 }
 
 body {
-  //font-family: ;
+  font-family: $ff-main;
 }
 
 html, body {
   height: 100%;
 }
 
-div, ul, li, p, a, img, button {
+div, ul, li, p, a, img, button, html {
   box-sizing: border-box;
   display: block;
 }
