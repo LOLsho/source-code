@@ -2,7 +2,11 @@
 @import "global/mixins";
 @import "global/fonts";
 @import "global/base";
+@import "global/common-classes";
 
 
 //sections
 @import "sections/header";
+@import "sections/greeting";
+@import "sections/lvl-1";
+@import "sections/lvl-2";

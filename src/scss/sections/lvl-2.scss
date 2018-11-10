@@ -1,0 +1,185 @@
+.lvl-2__container {
+  margin-bottom: 30vh;
+}
+
+.lvl-2__title {
+
+}
+
+.lvl-2__sub-title {
+  font-weight: normal;
+  font-size: 36px;
+  text-align: center;
+}
+
+.cards__container {
+  margin: -45px auto 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 320px;
+
+  @media #{$tablet} {
+    max-width: 800px;
+  }
+  
+  @media #{$desctop} {
+    justify-content: space-between;
+    max-width: unset;
+    margin: -30px auto 0;
+  }
+}
+
+.cards__wrap {
+  position: relative;
+  margin-top: 70px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media #{$desctop} {
+    margin-top: 55px;
+  }
+}
+
+.cards__card {
+  background: $card-bg-color url("../img/png/Photo.png") no-repeat left bottom;
+  width: 320px;
+  height: 480px;
+  cursor: pointer;
+  padding: 18px 48px;
+  color: #666666;
+  position: relative;
+  transition: border-color $card-transition;
+  font-family: "Trebuchet MS";
+  //margin-bottom: 30px;
+
+
+  &_default {
+    @include card-border($default-color);
+    @include layer(white, .0);
+
+    .cards__weight {
+      background-color: $default-color;
+    }
+
+    &:hover {
+      @include card-border($default-color-hover);
+
+      .cards__weight {
+        background-color: $default-color-hover;
+      }
+    }
+  }
+
+
+  &_selected {
+    @include card-border($selected-color);
+    @include layer(white, .0);
+
+    .cards__weight {
+      background-color: $selected-color;
+    }
+
+    &-hovered {
+      @include card-border($selected-color-hover);
+      @include layer(white, .0);
+
+      .cards__weight {
+        background-color: $selected-color-hover;
+      }
+
+      .cards__top-phrase {
+        color: $selected-color-hover;
+      }
+    }
+  }
+  
+  &_disabled {
+    cursor: not-allowed;
+    @include card-border($disabled-color);
+    @include layer(white, .7);
+
+    .cards__weight {
+      background-color: $disabled-color;
+    }
+  }
+}
+
+.cards__top-phrase {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.cards__title {
+  font-size: 48px;
+  font-weight: 700;
+  color: black;
+  margin-left: -3px;
+}
+
+.cards__title-small {
+  color: black;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cards__benefits {
+  margin-top: 16px;
+}
+
+.cards__benefit {
+  font-size: 14px;
+}
+
+.cards__bold-num {
+  font-weight: bold;
+}
+
+.cards__weight {
+  border-radius: 100px;
+  background-color: #1698d9;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  transition: background-color $card-transition;
+}
+
+.cards__weight-num {
+  font-size: 42px;
+
+}
+
+.cards__weight-desc {
+  font-size: 21px;
+  margin-top: -5px;
+}
+
+.cards__bottom-text {
+  position: absolute;
+  bottom: -28px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 13px;
+
+  &_disabled {
+    color: #ffff66;
+  }
+}
+
+.cards__buy-link {
+  color: $link-color;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px dashed $link-color;
+}

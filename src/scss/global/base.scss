@@ -4,14 +4,17 @@
 }
 
 body {
+  padding-top: 40px;
   font-family: $ff-main;
+  background: url("../img/bgs/Pattern.png");
+  color: white;
 }
 
 html, body {
   height: 100%;
 }
 
-div, ul, li, p, a, img, button, html {
+div, ul, li, p, img, button, html, section {
   box-sizing: border-box;
   display: block;
 }
@@ -21,9 +24,5 @@ h1 {
 }
 
 h2 {
-
-}
-
-.container {
 
 }

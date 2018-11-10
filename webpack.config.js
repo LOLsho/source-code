@@ -16,10 +16,22 @@ PATHS = {
 
 
 const common = {
-    entry: PATHS.src + '/js/index.js',
+    entry: PATHS.src + '/ts/index.ts',
     output: {
         path: PATHS.build,
         filename: 'js/main.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
+            }
+        ]
+    },
+    resolve: {
+        extensions: [ '.tsx', '.ts', '.js' ]
     },
     plugins: [
         new HtmlWebpackPlugin({

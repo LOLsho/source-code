@@ -1,4 +1,21 @@
 // fonts
-$ff-main: 'RobotoBold', sans-serif;
-$ff-main-bold: '';
-$ff-main-light: '';
+$ff-main: 'Eho', sans-serif;
+
+// colors
+$card-bg-color: #f2f2f2;
+$default-color: #1698d9;
+$default-color-hover: #2ea8e6;
+$selected-color: #d91667;
+$selected-color-hover: #e52e7a;
+$disabled-color: #b3b3b3;
+$link-color: #1698d9;
+
+
+// other
+$border-radius: 16px;
+$card-transition: 0.3s ease;
+
+
+// media
+$desctop: (min-width: 1070px);
+$tablet: (min-width: 800px);

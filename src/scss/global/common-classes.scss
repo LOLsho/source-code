@@ -1,0 +1,19 @@
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+  
+  @media (min-width: 576px) {
+    padding: 0 20px;
+  }
+}
+
+.section-title {
+  text-align: center;
+  margin: 0 0 35px 0;
+  padding: 20px 0;
+  font-size: 42px;
+  border-radius: $border-radius;
+  background-color: rgba(white, 0.1);
+}

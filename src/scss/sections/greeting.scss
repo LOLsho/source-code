@@ -1,0 +1,33 @@
+.greeting {
+  position: relative;
+  padding: 15px 20px;
+  width: 280px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: $border-radius;
+  border: 4px solid $default-color;
+  margin-bottom: 40px;
+}
+
+.greeting__text {
+  font-size: 24px;
+  color: darkcyan;
+  font-weight: bold;
+}
+
+.greeting__logo-wrap {
+  top: 5px;
+  right: 16px;
+  transform: rotate(-45deg);
+  position: absolute;
+  background-color: rgba(greenyellow, .35);
+  transition: transform 0.4s ease, background-color 0.4s ease;
+
+  &:hover {
+    transform: rotate(45deg);
+  }
+}
+
+.greeting__logo {
+  width: 32px;
+}

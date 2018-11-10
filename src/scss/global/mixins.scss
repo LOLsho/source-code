@@ -17,6 +17,9 @@
       @if $format == 'ttf' {
         src: url($url + '.ttf')  format('truetype');                /* Safari, Android, iOS */
       }
+      @if $format == 'otf' {
+        src: url($url + '.otf')  format("opentype");
+      }
       @if $format == 'svg' {
         src: url($url + '.svg#svgFontName') format('svg');          /* Legacy iOS */
       }
@@ -46,4 +49,42 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@mixin card-border($color) {
+  border-radius: $border-radius;
+  border: 4px solid $color;
+
+  -webkit-clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+  clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+
+  &:after {
+    content: '';
+    transition: background-color $card-transition;
+
+    position: absolute;
+
+    width: 6px;
+    height: 58px;
+    top: -11px;
+    left: 15px;
+    transform: rotate(44deg);
+    background-color: $color;
+    z-index: 3;
+  }
+}
+
+
+@mixin layer($color, $opacity) {
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba($color, $opacity);
+    border-radius: 13px;
+    z-index: 2;
+  }
 }
