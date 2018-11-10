@@ -1,5 +1,5 @@
 .lvl-2__container {
-  margin-bottom: 30vh;
+  padding-bottom: 200px;
 }
 
 .lvl-2__title {
@@ -10,6 +10,7 @@
   font-weight: normal;
   font-size: 36px;
   text-align: center;
+  font-family: 'Eho', sans-serif;
 }
 
 .cards__container {
@@ -171,6 +172,7 @@
   width: 100%;
   color: white;
   font-size: 13px;
+  font-family: "Trebuchet MS";
 
   &_disabled {
     color: #ffff66;

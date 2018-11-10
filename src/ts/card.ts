@@ -58,7 +58,6 @@ export class Card {
     }
 
     makeStateSelected(elems: CardElements) {
-        console.log('in makeStateSelected');
         this.state = 'selected';
         elems.card.className = 'cards__card cards__card_selected';
         elems.bottomText.innerHTML = `${this.bottomText[this.state]}`;
